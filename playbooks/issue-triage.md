@@ -80,65 +80,75 @@ Once an issue is triaged, the maintainers can work on addressing it. {{Insert st
 * The issue is closed with `help-wanted` and an explanation that this is not something the maintainers will be working on soon, but well-written Pull Requests would be accepted
 * The issue is closed for some other reason
 
-Just because something goes on the backlog doesn't mean that it will be addressed immediately. But the idea is that all issues that are open will be periodically reviewed and kept in the priority list. Since we will be reviewing _all_ open issues at fixed time intervals, we will need to keep this list manageable and realistic.
+Just because something goes on the backlog doesn't mean that it will be addressed immediately. But the idea is that all issues that are open will be periodically reviewed and kept in the priority list. Since we will be reviewing *all* open issues at fixed time intervals, we will need to keep this list manageable and realistic.
 
 ## Old, Untouched Issues
 
-Despite everyone's best efforts, old issues will always exist. If you find one that hasn't been touched in a quite a while _and_ you are unable to recreate the behavior, update the issue with the [`old-untouched` response](responses/old-untouched.md)
+Despite everyone's best efforts, old issues will always exist. If you find one that hasn't been touched in a quite a while *and* you are unable to recreate the behavior, update the issue with the [`old-untouched` response](responses/old-untouched.md)
 
 ## Common Responses
 
 This section outlines several common scenarios, and the responses and labels we recommend using for issue triage. It also tries to address several commonly asked questions for those new to the issue triage process.
 
-_NB: The reponses below are meant to be a guide for someone new to triaging issues in Electron, not requirements. If you find an issue while triaging that you think needs a different response than is recommended here, use your own judgement._
+*NB: The reponses below are meant to be a guide for someone new to triaging issues in Electron, not requirements. If you find an issue while triaging that you think needs a different response than is recommended here, use your own judgement.*
 
 #### Low Quality/Spam
 
 Issue did not fill out the issue template:
-  * Reply with [`needs-template` response](responses/needs-template.md)
+
+* Reply with [`needs-template` response](responses/needs-template.md)
 
 Issue is asking about a third-party dependency, or app-specific JavaScript code
-  * Reply with [`not-an-issue` response](responses/not-an-issue.md)
-  * Close the issue
+
+* Reply with [`not-an-issue` response](responses/not-an-issue.md)
+* Close the issue
 
 Issue is transparently spam
-  * Close the issue (no reply needed)
+
+* Close the issue (no reply needed)
 
 #### Blocked/Needs Info
 
 Issue does not contain adequate information (i.e., no expected behavior or is on an unsupported version of Electron):
-  * Reply with [`old-version` response](responses/old-version.md), or ask for clarification on missing information
-  * Add `blocked/needs-info` label
+
+* Reply with [`old-version` response](responses/old-version.md), or ask for clarification on missing information
+* Add `blocked/needs-info` label
 
 Issue has no repro:
-  * Reply with [`blocked-needs-repro` response](responses/blocked-needs-repro.md)
-  * Add `blocked/needs-repro` label
+
+* Reply with [`blocked-needs-repro` response](responses/blocked-needs-repro.md)
+* Add `blocked/needs-repro` label
 
 ### Has Repro
 
 Issue does contain enough information and has a repro, but you as a triager don't have time to confirm the repro:
-  * Add `has-repro-gist` or `has-repro-repo` label
-  * Add `platform/*` for the affected OS (Mac/Windows/Linux/All)
-  * Add `status/reviewed` label
+
+* Add `has-repro-gist` or `has-repro-repo` label
+* Add `platform/*` for the affected OS (Mac/Windows/Linux/All)
+* Add `status/reviewed` label
 
 Issue can be reproduced!
-  * Add `status/confirmed` label
-  * Add `platform/*` for the affected OS (Mac/Windows/Linux/All) if not added
-  * If the issue affects a new version of Electron, add it to the Project Board for the **newest** affected version (i.e. if both 17-x-y and 18-x-y are affected, add it to the 18-x-y Project Board).
+
+* Add `status/confirmed` label
+* Add `platform/*` for the affected OS (Mac/Windows/Linux/All) if not added
+* If the issue affects a new version of Electron, add it to the Project Board for the **newest** affected version (i.e. if both 17-x-y and 18-x-y are affected, add it to the 18-x-y Project Board).
 
 ### Crash Report
 
 Issue details a crash, but has no repro or crash report attached:
-  * Reply with [`crash-report` response](responses/crash-report.md)
-  * Add `blocked/needs-info` label
-  * Add `crash` label
+
+* Reply with [`crash-report` response](responses/crash-report.md)
+* Add `blocked/needs-info` label
+* Add `crash` label
 
 Issue details a crash and has a crash report attached, but no repro:
-  * Add `crash` label
-  * Try running the .dmp file or report through `electron-minidump` or `electron-symbolicate`. If the crash is only a stacktrace, or if you find you need more symbol information, reply with [`crash-report` response](responses/crash-report.md)
-  * Add `status/reviewed` label
+
+* Add `crash` label
+* Try running the .dmp file or report through `electron-minidump` or `electron-symbolicate`. If the crash is only a stacktrace, or if you find you need more symbol information, reply with [`crash-report` response](responses/crash-report.md)
+* Add `status/reviewed` label
 
 Issue details a crash, and has both a crash report and a repro:
-  * Add `crash` label 
-  * Add `has-repro-gist` or `has-repro-repo` label
-  * Review the repro gist. If the crash can be reproduced, add `status/confirmed` label
+
+* Add `crash` label
+* Add `has-repro-gist` or `has-repro-repo` label
+* Review the repro gist. If the crash can be reproduced, add `status/confirmed` label

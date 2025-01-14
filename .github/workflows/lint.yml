@@ -1,0 +1,39 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      fetch-external-links:
+        type: boolean
+        description: Check if external links are broken
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+    - name: Setup Node.js
+      uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
+      with:
+        node-version: 20.x
+    - name: Create a Temporary package.json
+      run: npm init --yes
+    - name: Install @electron/lint-roller
+      run: npm install --save-dev @electron/lint-roller@^2.1.0
+    - name: Run markdownlint
+      run: npx electron-markdownlint "**/*.md"
+    - name: Lint links
+      run: npx lint-roller-markdown-links --ignore-path .markdownlintignore "**/*.md"
+      if: ${{ always() }}
+    - name: Check external links
+      run: npx lint-roller-markdown-links --ignore-path .markdownlintignore --fetch-external-links "**/*.md"
+      if: ${{ inputs.fetch-external-links }}

@@ -37,23 +37,23 @@ These are our core values, as voted by the maintainers, in order of importance. 
 
 ## Definitions
 
- * A _maintainer_ is anyone who plays an active role in governance.
- * A _collaborator_ is active in the community, but not in governance.
- * A _participant_ is anyone who is a maintainer or collaborator.
- * A _Working Group_ is a group of maintainers that is formed to take responsibility for certain aspects of the Electron project. Normally these groups will meet regularly but in some cases will only meet as required to fulfill their responsibilities.
- * A _chair_ is the acting leader of a Working Group that uses the [Rotating Chair Model](rotating-chair-model.md).
- * A [_delegate_](#Delegation) is a chosen representative of a Working Group.
+* A _maintainer_ is anyone who plays an active role in governance.
+* A _collaborator_ is active in the community, but not in governance.
+* A _participant_ is anyone who is a maintainer or collaborator.
+* A _Working Group_ is a group of maintainers that is formed to take responsibility for certain aspects of the Electron project. Normally these groups will meet regularly but in some cases will only meet as required to fulfill their responsibilities.
+* A _chair_ is the acting leader of a Working Group that uses the [Rotating Chair Model](rotating-chair-model.md).
+* A [_delegate_](#delegation) is a chosen representative of a Working Group.
 
 ## Participation
 
- * [Code of Conduct](../CODE_OF_CONDUCT.md)
- * [Using Slack](../policy/slack.md)
- * [Triaging Issues](../playbooks/README.md)
- * [Using Pull Requests](../policy/pull-requests.md)
+* [Code of Conduct](../CODE_OF_CONDUCT.md)
+* [Using Slack](../policy/slack.md)
+* [Triaging Issues](../playbooks/README.md)
+* [Using Pull Requests](../policy/pull-requests.md)
 
 ## Working Groups
 
-| Working Group  | Repo | Description | 
+| Working Group  | Repo | Description |
 |:---------------|:------|-------------|
 | Administrative | [wg-administrative](../wg-administrative) | Administrates Governance |
 | Community      | [wg-community-safety](../wg-community-safety/) | Handles Code of Conduct issues |
@@ -67,10 +67,11 @@ These are our core values, as voted by the maintainers, in order of importance. 
 ### Responsibilities
 
 All Working Groups have these core responsibilities:
- * They shall decide for themselves, and publicly post, their rules, e.g. how decisions are made, when meetings are held, and who may attend.
- * They shall choose a model of work to support reaching the Working Group's goals.
- * They shall keep meeting notes, including agenda items, discussion points, and outcomes for everyone to review.
- * They shall be collaborative and work [in good faith](#Core-Values) with other Working Groups.
+
+* They shall decide for themselves, and publicly post, their rules, e.g. how decisions are made, when meetings are held, and who may attend.
+* They shall choose a model of work to support reaching the Working Group's goals.
+* They shall keep meeting notes, including agenda items, discussion points, and outcomes for everyone to review.
+* They shall be collaborative and work [in good faith](#core-values) with other Working Groups.
 
 ### Meetings
 
@@ -84,11 +85,11 @@ Members should have the opportunity to read a summary of the meeting and share p
 
 Delegates have responsibilities to their Working Group: they represent the collective will of that group to others.
 
-Delegates are [chosen](#Reaching-Agreement) by the members of their Working Group, either when the need for one arises or for a short period of time not longer than four weeks when a delegate may be needed multiple times in rapid succession.
+Delegates are [chosen](#reaching-agreement) by the members of their Working Group, either when the need for one arises or for a short period of time not longer than four weeks when a delegate may be needed multiple times in rapid succession.
 
 ### Reaching Agreement
 
-If an issue affects only one Working Group, that group can make decisions [on its own](#Meetings).
+If an issue affects only one Working Group, that group can make decisions [on its own](#meetings).
 
 If an issue affects more than one Working Group, those groups are encouraged to work towards agreement together.
 
@@ -100,7 +101,7 @@ Regardless of how agreement is reached, the participating groups must make a rea
 
 # Electorate
 
-The **Electorate** is the body who holds the ability to alter the charter and appoint members of the [Administrative Working Group](#Administrative-Working-Group).
+The **Electorate** is the body who holds the ability to alter the charter and appoint members of the [Administrative Working Group](#administrative-working-group).
 
 The Electorate should try to balance several factors in its composition of members:
 
@@ -129,3 +130,17 @@ If a delegate Working Group is failing to meet its responsibilities, the AWG may
 
 > **Authors note:**
 > The current Electorate/AWG mix places almost all the power in the hands of a few large corporations at the outset. While not ideal to many, this was chosen because it represents the present status-quo, as of writing. The choice to delay defining an Electorate was made to _ensure_ it was not rushed, and that we have time to balance project stakeholders large and small.
+
+## Onboarding / Offboarding
+
+### Offboarding
+
+Occasionally, Electron maintainers will become inactive, or must step down from the project for personal or professional reasons. When this happens, it is important to reduce the risk to the project of compromised accounts with administrative permissions. This is not intended as a judgement on any individual member, simply a risk mitigation strategy for the project as a whole.
+
+If a maintainer no longer wishes to be a part of a working group, they should let the working group know via Slack or by submitting a PR removing themselves from the working group in governance. If a maintainer becomes inactive, the working group may choose to vote the member out via their own process - this process will be defined by each individual working group.
+
+For the safety and security of the project, all maintainers who have been offboarded from all working groups will be removed from GitHub member status and GSuite. They may also be moved to a multi-channel guest in the maintainer Slack.
+
+### Emeritus Status
+
+When a former maintainer is offboarded, they will be automatically moved to Emeritus status within the governance repo. There is no minimum required period of serving as a working group member for this status - any working group member who served for any length of time, but is no longer part of the working group, is eligible.
